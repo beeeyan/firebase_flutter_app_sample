@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_sample/root.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -6,9 +7,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // firebaseの初期化 
-  // ※ 強制アップデートなどfirebaseの機能を使う場合に有効にする。
-  // ※ firebaseの設定ができていない場合は無効にする。
-  // await Firebase.initializeApp();
+  await Firebase.initializeApp();
 
   runApp(
     const ProviderScope(

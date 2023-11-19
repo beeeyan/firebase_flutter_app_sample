@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_sample/feature/remote_config/presentation/forced_upgrade.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../feature/pokemon/presentation/pokemon_view.dart';
 import '../my_home.dart';
 
 final bottomBarPageTypeProvider =
@@ -11,13 +11,12 @@ enum BottomBarPageType {
   home(
     'ホーム',
     Icon(Icons.home),
-    // ForcedUpgradePage(),
     MyHomePage(),
   ),
   secondPage(
-    'ポケモン',
+    '強制アップデート',
     Icon(Icons.bookmark_outlined),
-    PokemonViewPage(),
+    ForcedUpgradePage(),
   );
 
   const BottomBarPageType(
